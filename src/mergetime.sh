@@ -45,4 +45,8 @@ for exp_name in "${exp_names[@]}"; do
     rm -r $temp_dir
 done
 
+# copy grid file if not yet done for later interpolation:
+if [ ! -f ../data/icon_grid_0054_R02B08_G.nc ]; then
+    cp ${data_dir}/${exp_name}/icon_grid_0054_R02B08_G.nc ../data/icon_grid_0054_R02B08_G.nc
+fi
 

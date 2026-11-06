@@ -22,12 +22,13 @@ horizontal_interpolation=true
 generate_weightfile=false
 vertical_interpolation=${vertical_interpolation:-true} # for 3d vars. Only works if you have interpolated pressure (pfull) already horizontally, adapt pfull_file below if needed
 
+grid_file="../data/icon_grid_0054_R02B08_G.nc"
+
 # Loop over experiment names
 for exp in "${exp_names[@]}"; do
     infile="../data/${exp}_${stream}_${var}_mergetime.nc"
     outfile="../data/${exp}_${stream}_${var}_${res}deg.nc"
     grid_description="grid_file_${res}deg.txt"
-    grid_file="/work/ka1176/paul/icon-ml/experiments/icon-ml-superdropnet-angel/params/icon_grid_0054_R02B08_G.nc"
     weightfile="../data/weightfile_rb02b08_to_${res}x${res}deg.nc"
     outfile_vert_int="../data/${exp}_${stream}_${var}_${res}deg_pl.nc"
     pfull_file="../data/${exp}_atm_3d_P1D_4_ta_tend_ta_${res}deg.nc"

@@ -10,8 +10,7 @@
 module purge
 module load cdo/2.5.0-gcc-11.2.0
 
-grid_file="/work/ka1176/paul/icon-ml/experiments/icon-ml-superdropnet-angel/params/icon_grid_0054_R02B08_G.nc"
-
+grid_file="..data/icon_grid_0054_R02B08_G.nc"
 infile="../data/sst_bc_4xCO2.nc"
 outfile="../data/sst_bc_int_4xCO2.nc"
 weightfile_sst="wgtdis_MPI-ESM_to_r2b8_sst.nc"
